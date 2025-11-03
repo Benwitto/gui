@@ -27,7 +27,7 @@ eingabe_url = st.text_input("PLP URL:")
 eingabe_pn = st.text_area("Artikelnummern:")
 
 # Wenn Button gedrückt wird:
-if st.button("Covert"):
+if st.button("convert"):
     st.write("")
     st.write("")
     # Hier kommt deine Logik hin:
@@ -44,7 +44,7 @@ if st.button("Covert"):
     cols = st.columns(len(image_urls))
     for col, url in zip(cols, image_urls):
         with col:
-            st.markdown("<div style='padding: 0 10px;'>", unsafe_allow_html=True)
-            st.image(url, use_container_width=True)
+            st.markdown("<div style='padding: 0 10px; display:flex; justify-content:center;'>", unsafe_allow_html=True)
+            st.image(url)
             st.markdown("</div>", unsafe_allow_html=True)
 
